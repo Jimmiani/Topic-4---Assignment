@@ -7,7 +7,7 @@
             // Emmett Cornies
             string name, lastName, login, item1, item2;
             int age, grade, studentId;
-            double hourlyPay, averageGrade, num1, num2, num3, price1, price2;
+            double hourlyPay, averageGrade, num1, num2, num3, price1, price2, tax, discount, total, subtotal, totalOwed;
             Console.WriteLine("Hello, What is your name?");
             name = Console.ReadLine();
             Console.WriteLine("Hi, " + name + "! How old are you?");
@@ -75,7 +75,14 @@
             Console.Write("Price of " + item2 + ": ");
             Double.TryParse(Console.ReadLine(), out price2);
             Console.WriteLine();
-            Console.WriteLine("Thank your sir! That will be " + ((price1 + price2) * 1.13).ToString("C") + " In total with tax. However, luckily for you, we have a special promotion going on right now! " + item1 + " and " + item2 + "s are actually on sale right now! 20% discount off the total price! That means your total price will only be " + (((price1 + price2) * 1.13) * 0.8).ToString("C") + "! I'll get that receipt printed out for you right away.");
+            total = price1 + price2;
+            discount = total * 0.2;
+            subtotal = total - discount;
+            tax = subtotal * 0.13;
+            Console.WriteLine("Thank your sir! That will be " + (total * 1.13).ToString("C") + " In total with tax.");
+            Console.WriteLine("However, luckily for you, we have a special promotion going on right now! " + item1 + " and " + item2 + "s are actually on sale right now!");
+            Console.WriteLine("20% discount off the total price! That means your total price will only be " + tax.ToString("C") + "! I'll get that receipt printed out for you right away.");
+           
         }
     }
 }
