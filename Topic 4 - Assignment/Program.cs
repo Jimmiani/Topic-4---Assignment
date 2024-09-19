@@ -80,7 +80,8 @@
             subtotal = total - discount;
             tax = subtotal * 0.13;
             Console.WriteLine("Thank your sir! That will be " + (total * 1.13).ToString("C") + " In total with tax.");
-            Console.WriteLine("However, luckily for you, we have a special promotion going on right now! " + item1 + " and " + item2 + "s are actually on sale right now!");
+            Console.WriteLine("However, luckily for you, we have a special promotion going on right now! ");
+            Console.WriteLine(item1 + " and " + item2 + "s are actually on sale right now!"); 
             Console.WriteLine("20% discount off the total price! That means your total price will only be " + tax.ToString("C") + "! I'll get that receipt printed out for you right away.");
            
         }
