@@ -79,11 +79,23 @@
             discount = total * 0.2;
             subtotal = total - discount;
             tax = subtotal * 0.13;
-            Console.WriteLine("Thank your sir! That will be " + (total * 1.13).ToString("C") + " In total with tax.");
-            Console.WriteLine("However, luckily for you, we have a special promotion going on right now! ");
-            Console.WriteLine(item1 + " and " + item2 + "s are actually on sale right now!"); 
-            Console.WriteLine("20% discount off the total price! That means your total price will only be " + tax.ToString("C") + "! I'll get that receipt printed out for you right away.");
-           
+            totalOwed = subtotal + tax;
+            Console.WriteLine("Thank your sir! That will be " + total.ToString("C") + " Before tax.");
+            Console.WriteLine("However, luckily for you, we have a special promotion going on right now!");
+            Console.WriteLine(item1 + " and " + item2 + "s are actually on sale right now!");
+            Console.WriteLine("20% discount off the total price! That means your final price will only be " + totalOwed.ToString("C") + "!");
+            Console.WriteLine("I'll get that receipt printed out for you right away.");
+            Console.WriteLine();
+            Console.WriteLine("\tSales Receipt");
+            Console.WriteLine();
+            Console.WriteLine("\tItem 1:\t " + item1);
+            Console.WriteLine("\tPrice:\t " + price1.ToString("C"));
+            Console.WriteLine("\tItem 2:\t " + item2);
+            Console.WriteLine("\tPrice:\t " + price2.ToString("C"));
+            Console.WriteLine("\t==================");
+            Console.WriteLine("\tTotal:\t " + total.ToString("C"));
+            Console.WriteLine("\tDiscount (20%):\t " + discount.ToString("C"));
+
         }
     }
 }
