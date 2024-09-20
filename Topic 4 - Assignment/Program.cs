@@ -71,7 +71,7 @@
             Console.Write("Enter number 3: ");
             Double.TryParse(Console.ReadLine(), out num3);
             Console.WriteLine("Thank you! Processing your calculation...");
-            Thread.Sleep(4000);
+            Thread.Sleep(3000);
             Console.WriteLine("All done! Press enter to view the answer!");
             Console.ReadLine();
             finalNum = (num1 + num2 + num3) / 2;
@@ -100,16 +100,15 @@
             tax = subtotal * 0.13;
             totalOwed = subtotal + tax;
             Console.WriteLine("Thank your sir! That will be " + total.ToString("C") + " Before tax.");
-            Thread.Sleep(2500);
             Console.WriteLine("However, luckily for you, we have a special promotion going on right now!");
-            Thread.Sleep(2500);
             Console.WriteLine(item1 + " and " + item2 + " is actually on sale right now!");
-            Thread.Sleep(2500);
             Console.WriteLine("20% discount off the total price! That means your final price will only be " + totalOwed.ToString("C") + "!");
-            Thread.Sleep(2500);
             Console.WriteLine("I'll get that receipt printed out for you right away.");
             Console.WriteLine();
             Thread.Sleep(2000);
+            Console.WriteLine("Press Enter to view receipt");
+            Console.WriteLine();
+            Console.ReadLine();
             Console.WriteLine("\tSales Receipt");
             Console.WriteLine();
             Console.WriteLine("\tItem 1:\t\t " + item1);
