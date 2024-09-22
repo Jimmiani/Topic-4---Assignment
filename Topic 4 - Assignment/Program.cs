@@ -70,6 +70,7 @@
             Double.TryParse(Console.ReadLine(), out num2);
             Console.Write("Enter number 3: ");
             Double.TryParse(Console.ReadLine(), out num3);
+            Console.WriteLine();
             Console.WriteLine("Thank you! Processing your calculation...");
             Thread.Sleep(3000);
             Console.WriteLine("All done! Press enter to view the answer!");
@@ -99,7 +100,7 @@
             subtotal = total - discount;
             tax = subtotal * 0.13;
             totalOwed = subtotal + tax;
-            Console.WriteLine("Thank your sir! That will be " + total.ToString("C") + " Before tax.");
+            Console.WriteLine("Thank your sir! That will be " + total.ToString("C") + " before tax.");
             Console.WriteLine("However, luckily for you, we have a special promotion going on right now!");
             Console.WriteLine(item1 + " and " + item2 + " is actually on sale right now!");
             Console.WriteLine("20% discount off the total price! That means your final price will only be " + totalOwed.ToString("C") + "!");
